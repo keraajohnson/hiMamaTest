@@ -1,0 +1,90 @@
+// global styles
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+    max-width: 1080px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.visuallyHidden {
+ position: absolute;
+ overflow: hidden;
+ clip: rect(0 0 0 0);
+ height: 1px;
+ width: 1px;
+ margin: -1px;
+ padding: 0;
+ border: 0; 
+}
+
+// variables
+$medBlue: #43B9C6;
+$dkBlue: #0F8790;
+$ltGrey: #f0f0f0;
+$medGrey: #4b4b4b;
+$ltOrange: #FECB7C;
+$medOrange: #F78F1E;
+$ltGreen: #B5D55B;
+$medGreen: #79BE43;
+
+// mixins
+@mixin displayFlex {
+    display: flex;
+}
+
+// text mixins
+@mixin heading($fontSize) {
+    font-family: 'Bree Serif', serif;
+    font-size: $fontSize;
+    letter-spacing: 2px;
+}
+
+@mixin subHeading($fontSize) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $fontSize;
+    font-weight: 800;
+    letter-spacing: 2
+    px;
+}
+
+@mixin bodyText($fontSize) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $fontSize;
+    letter-spacing: 2.5px;
+    line-height: 35px;
+}
+
+// breakpoint mixins
+@mixin breakpoint($point){
+    @if $point == forDesktop{
+        @media (max-width: 1080px) { @content ; }
+    }
+    @else if $point == forTablet__landscape{
+        @media (max-width: 950px) { @content ; }
+    }
+    @else if $point == forTablet__portrait{
+        @media (max-width: 720px)  { @content ; }
+    }
+    @else if $point == forPhablet{
+        @media (max-width: 550px)  { @content ; }
+    }
+    @else if $point == forMobile{
+        @media (max-width: 375px)  { @content ; }
+    }
+    @else if $point == forMobile__small{
+        @media (max-width: 320px)  { @content ; }
+    }
+}

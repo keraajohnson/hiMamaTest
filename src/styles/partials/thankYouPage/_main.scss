@@ -1,0 +1,48 @@
+.thankYou {
+    .container {
+        @include displayFlex;
+        flex-direction: column;
+        background-color: $ltGreen;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        padding: 40px;
+        h2 {
+            @include heading(6.5rem);
+            color: white;
+            letter-spacing: 4px;
+            text-align: center;
+        }
+        .thankYou_bold {
+            @include subHeading(2.6rem);
+            color: white;
+            // forTablet__portrait breakpoint
+            @include breakpoint(forTablet__portrait) {
+                font-size: 2rem;
+            }
+            
+        }
+        p {
+            @include bodyText(2.5rem);
+            color: $medGrey;
+            margin: 10px 0;
+        }
+        .return {
+            @include bodyText(1.7rem);
+            text-align: center;
+            background-color: $dkBlue;
+            align-self: center;
+            text-decoration: none;
+            color: white;
+            width: 35%;
+            padding: 15px;
+            margin: 10px 0 10px 0;
+            @include breakpoint(forDesktop) {
+                width: 50%;
+            }
+            // forTablet__portrait breakpoint
+            @include breakpoint(forTablet__portrait) {
+                width: 90%;
+            }
+        }
+    }
+}

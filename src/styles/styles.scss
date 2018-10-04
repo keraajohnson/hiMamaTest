@@ -1,3 +1,5 @@
-body {
-    background: red;
-}
+@import "src/styles/partials/setup.scss";
+@import "src/styles/partials/utils.scss";
+@import "src/styles/partials/landingPage/header.scss";
+@import "src/styles/partials/landingPage/form.scss";
+@import "src/styles/partials/thankYouPage/main.scss";

@@ -1,0 +1,197 @@
+.logo{
+    margin-top: 20px;
+    .imageContainer {
+        width: 100%;
+        border-bottom: 4px solid $dkBlue;
+    }
+}
+
+.about {
+    margin-top: 30px;
+    span {
+        display: block;
+    }
+    h3 {
+        @include subHeading(1.8rem);
+        color: $dkBlue;
+        letter-spacing: 2px;
+    }
+    .aboutContainer {
+        @include displayFlex;
+        margin-top: 15px;
+        align-items: center;
+        .aboutText {
+            @include bodyText(2.3rem);
+            width: 55%;
+            // forTablet__portrait breakpoint
+            @include breakpoint(forTablet__landscape) {
+                width: 100%;
+            }
+            h1 {
+                @include heading(4rem);
+                line-height: 45px;
+                letter-spacing: 3.2px;
+                margin-bottom: 20px;
+                // forTablet__portrait breakpoint
+                @include breakpoint(forTablet__landscape) {
+                    font-size: 5rem;
+                }
+            }
+            p {
+                color: $medGrey;
+            }
+        }
+        .aboutImage{
+            width: 40%;
+            // forTablet__portrait breakpoint
+            @include breakpoint(forTablet__landscape) {
+                display: none;
+            }
+        }
+    }
+}
+
+.signUp {
+    margin: 30px 0;
+    padding-top: 30px;
+    background: $ltGrey;
+        form {
+            @include displayFlex;
+            flex-direction: column;
+            .formContainer {
+            @include displayFlex;
+            // forTablet__portrait breakpoint
+            @include breakpoint(forTablet__landscape) {
+                flex-direction: column;
+            }
+                .parentInfo, 
+                .daycareInfo {
+                    width: 50%;
+                    padding: 0 40px;
+                    // forTablet__portrait breakpoint
+                    @include breakpoint(forTablet__landscape) {
+                        width: 100%;
+                    }
+                        h2 {
+                            @include heading(2.5rem);
+                         }
+                         .daycareHeading {
+                             // forTablet__portrait breakpoint
+                            @include breakpoint(forTablet__landscape) {
+                                margin-top: 25px;
+                            }
+                         }
+                         input[type=text],
+                         input[type=email] {
+                            @include bodyText(1.5rem);
+                            padding: 8px 5px;
+                            margin-top: 8px;
+                            border: none;
+                                &:focus {
+                                    background-color: $ltOrange;
+                                    outline: none;
+                                }
+                         }
+                         input[type=file] {
+                            @include bodyText(1.2rem);
+                            letter-spacing: 1px;
+                            margin-top: 8px;
+                         }
+                         label,
+                         p {
+                            @include subHeading(1.4rem);
+                        }
+                        span {
+                            color: $medOrange;
+                            font-size: 1.5rem;
+                        }
+                       .inputContainer {
+                           @include displayFlex;
+                           flex-direction: column;
+                           margin-top: 25px;
+                        }
+                        .contactContainer {
+                            @include displayFlex;
+                            margin-top: 15px;
+                                .container {
+                                display: block;
+                                margin: 0 25px;
+                                position: relative;
+                                cursor: pointer;
+                                -webkit-user-select: none;
+                                -moz-user-select: none;
+                                -ms-user-select: none;
+                                user-select: none;
+                                    input {
+                                        position: absolute;
+                                        opacity: 0;
+                                        cursor: pointer;
+                                    }
+                                    .checkmark {
+                                        position: absolute;
+                                        top: 0px;
+                                        left:-25px;
+                                        height: 20px;
+                                        width: 20px;
+                                        background-color:#a6a6a6;
+                                        border-radius: 50%;
+                                    }
+                                }      
+                        }
+                        .container:hover input ~ .checkmark {
+                            background-color:#a6a6a6;
+                        }
+                        .container input:checked ~ .checkmark {
+                            background-color: $medBlue;
+                        }
+                        .container input:checked ~ .checkmark:after {
+                            display: block;
+                        }
+                        .container .checkmark:after {
+                            top: 9px;
+                            left: 9px;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background: white;
+                        }
+                        .checkmark:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                    }
+                    .container input:checked ~ .checkmark:after {
+                        display: block;
+                    }
+                    .container .checkmark:after {
+                        top:6px;
+                        left:6px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: white;
+                    }
+
+                }
+        }
+        .letsTalk{
+            @include bodyText(2rem);
+            background-color: $medBlue;
+            align-self: center;
+            width: 20%;
+            border: none;
+            padding: 10px;
+            margin: 30px 0 20px 0;
+            color: white;
+            transition: 1s all ease;
+                &:hover{
+                    background-color: $medGreen;
+                }
+            // forTablet__portrait breakpoint
+            @include breakpoint(forTablet__landscape) {
+                width: 35%;
+                padding: 12px;
+            }    
+         }
+     }    
+}

@@ -4,11 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="public/styles/style.css">
-    <title>Document</title>
+    <title>HiMama - Childcare</title>
 </head>
 <body>
-    <h1>Neat</h1>
+    <!-- header starts -->
+    <header>
+        <!-- nav -->
+        <nav>
+            <div class="wrapper">
+                <ul>
+                    <div class="getStarted">
+                        <li><a href="#">Get Started</a></li>
+                    </div>
+                    <div class="navLink">
+                        <li><a href="#">Child Care</a></li>
+                    </div>
+                    <div class="navLink">
+                        <li><a href="#">Parent</a></li>
+                    </div>
+                    <div class="navLink">
+                        <li><a href="#">Features</a></li>
+                    </div>
+                    <div class="navLink">
+                        <li><a href="#">Blog</a></li>
+                    </div>
+                    <div class="navLink">
+                        <li><a href="#">Log In</a></li>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navMobile">
+            <div class="hamburger">
+                <i class="fas fa-bars icon"></i>
+            </div>
+            <ul class="menu">
+                <li class="exit"><i class="fas fa-times icon"></i></li>
+                <div class="navLink__mobile">
+                    <li><a href="#">Child Care</a></li>
+                </div>
+                <div class="navLink__mobile">
+                    <li><a href="#">Parent</a></li>
+                </div>
+                <div class="navLink__mobile">
+                    <li><a href="#">Features</a></li>
+                </div>
+                <div class="navLink__mobile">
+                    <li><a href="#">Blog</a></li>
+                </div>
+                <div class="navLink__mobile">
+                    <li><a href="#">Log In</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <!-- header ends -->
+    <!-- main starts -->
+    <main>
+        <section class="logo">
+            <div class="wrapper imageContainer">
+                <img src="/assets/logo_header.png" alt="HiMama Logo, a cartoon train with a red body and blue wheels">
+            </div>
+        </section>
+        <div class="wrapper">
+            <section class="about">
+                <h3>Think your daycare should be using HiMama? Let us do the work!</h3>
+                <div class="aboutContainer">
+                    <div class="aboutText">
+                        <h1>Engage Parents.<span></span>Empower Staff.</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit commodi esse a iusto numquam voluptates ut est at, magni quaerat eligendi omnis.</p>
+                    </div>
+                    <div class="aboutImage">
+                        <img src="/assets/observations.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="signUp">
+                <form action="">
+                    <div class="formContainer">
+                        <div class="parentInfo">
+                            <!-- parent name -->
+                            <h2>Your Information</h2>
+                            <div class="inputContainer">
+                                <label for="parentName">Name <span>*</span></label>
+                                <input required type="text" class="parentName" id="parentName" placeholder="Your Name">
+                            </div>
+                            <!-- parent email -->
+                            <div class="inputContainer">
+                                <label for="parentEmail">Your Email <span>*</span></label>
+                                <input required type="email" class="parentEmail" id="parentEmail" placeholder="Your E-Mail">
+                            </div>
+                            <!-- child name -->
+                            <div class="inputContainer">
+                                <label for="childName">Child's Name <span>*</span></label>
+                                <input required type="text" class="childName" id="childName" placeholder="Your Childs Name">
+                            </div>
+                            <!-- child photo -->
+                            <div class="inputContainer">
+                                <label for="childPicture">Child's Picture (Optional)</label>
+                                <input type="file" class="childPicture" id="childPicture">
+                            </div>
+                        </div>
+                        <div class="daycareInfo">
+                            <h2 class="daycareHeading">Daycare Information</h2>
+                            <!-- daycare name -->
+                            <div class="inputContainer">
+                                <label for="daycareName">Name of Daycare <span>*</span></label>
+                                <input required type="text" class="daycareName" id="daycareName" placeholder="Name of Daycare">
+                            </div>
+                             <!-- daycare email -->
+                            <div class="inputContainer">
+                                <label for="daycareEmail">Daycare Email <span>*</span></label>
+                                <input required type="email" class="daycareEmail" id="daycareEmail" placeholder="Daycare E-Mail">
+                            </div>
+                            <!-- daycare contact -->
+                            <div class="inputContainer">
+                                <p>Contact at Daycare <span>*</span></p>
+                                <label class="visuallyHidden" for="daycareContact"></label>
+                                <input required type="text" class="daycareContact" id="daycareContact" placeholder="Name">
+                            </div>
+                            <div class="contactContainer">
+                                <!-- teacher contact button -->
+                                <label class="container" for="teacher">Teacher
+                                    <input required type="radio" class="teacher" id="teacher" name="contactPosition">
+                                    <span class="checkmark"></span>
+                                </label>
+                               <!-- director contact button -->
+                                <label class="container" for="director">Director
+                                    <input required type="radio" class="director" id="director" name="contactPosition">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <!-- conact phone number -->
+                            <div class="inputContainer">
+                                <label class="container" for="contactNumber">Contact Phone Number <span>*</span></label> 
+                                <input required type="text" class="phoneNumber" id="phoneNumber" placeholder="Daycare Phone Number">
+                            </div>
+                            <div class="contactContainer">
+                                <!-- cell phone contact button -->
+                                <label class="container" for="cellphone">Cellphone
+                                    <input required type="radio" class="cellphone" id="cellphone" name="contactNumber">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <!-- landline contact button -->
+                                <label class="container" for="landline">Landline
+                                    <input required type="radio" class="landline" id="landline" name="contactNumber">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="letsTalk" id="letsTalk" value="Let's Chat">
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
     <script src="public/scripts/app.js"></script>
 </body>
 </html>
