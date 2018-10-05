@@ -1,0 +1,609 @@
+@charset "UTF-8";
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+.wrapper {
+  max-width: 1080px;
+  width: 75%;
+  margin: 0 auto; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+header nav {
+  background-color: #43B9C6;
+  width: 100%;
+  padding: 1px; }
+  header nav ul {
+    display: flex;
+    justify-content: flex-end; }
+    header nav ul .getStarted li {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 2.5px;
+      line-height: 35px;
+      background: #79BE43;
+      list-style: none;
+      padding: 10px; }
+      @media (max-width: 720px) {
+        header nav ul .getStarted li {
+          font-size: 1.7rem; } }
+      header nav ul .getStarted li:hover {
+        background: #0F8790; }
+      header nav ul .getStarted li a {
+        text-decoration: none;
+        color: white; }
+    header nav ul .navLink li {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 2.5px;
+      line-height: 35px;
+      list-style: none;
+      padding: 10px; }
+      @media (max-width: 720px) {
+        header nav ul .navLink li {
+          display: none; } }
+      header nav ul .navLink li:hover {
+        background: #0F8790; }
+      header nav ul .navLink li a {
+        text-decoration: none;
+        color: white; }
+
+.navMobile {
+  display: none;
+  width: 100%; }
+  @media (max-width: 720px) {
+    .navMobile {
+      display: block; } }
+  .navMobile .hamburger {
+    position: absolute;
+    right: 30px;
+    top: 17px; }
+    @media (max-width: 375px) {
+      .navMobile .hamburger {
+        right: 10px; } }
+    .navMobile .hamburger .icon {
+      font-size: 2.5rem;
+      color: white; }
+  .navMobile .menu {
+    display: none;
+    background: #f7f5f5;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-top: 0;
+    z-index: 10; }
+    .navMobile .menu .icon {
+      font-size: 4rem; }
+    .navMobile .menu li {
+      list-style: none;
+      padding: 30px;
+      text-align: center; }
+      .navMobile .menu li a {
+        font-family: 'Bree Serif', serif;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+        transition: color 0.5s ease; }
+        .navMobile .menu li a:hover {
+          color: black; }
+  .navMobile .show {
+    display: block;
+    width: 100%; }
+
+.bars {
+  width: 8%;
+  float: right; }
+
+.logo {
+  margin-top: 20px; }
+  .logo .imageContainer {
+    width: 80%;
+    border-bottom: 4px solid #0F8790; }
+
+.about {
+  margin-top: 30px; }
+  .about span {
+    display: block; }
+  .about h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 2 px;
+    color: #0F8790;
+    letter-spacing: 2px; }
+  .about .aboutContainer {
+    display: flex;
+    margin-top: 15px;
+    align-items: center; }
+    .about .aboutContainer .aboutText {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2.3rem;
+      letter-spacing: 2.5px;
+      line-height: 35px;
+      width: 55%; }
+      @media (max-width: 950px) {
+        .about .aboutContainer .aboutText {
+          width: 100%; } }
+      .about .aboutContainer .aboutText h1 {
+        font-family: 'Bree Serif', serif;
+        font-size: 4rem;
+        letter-spacing: 2px;
+        line-height: 45px;
+        letter-spacing: 3.2px;
+        margin-bottom: 20px; }
+        @media (max-width: 950px) {
+          .about .aboutContainer .aboutText h1 {
+            font-size: 4.3rem; } }
+        @media (max-width: 720px) {
+          .about .aboutContainer .aboutText h1 {
+            line-height: 60px; } }
+      .about .aboutContainer .aboutText p {
+        color: #4b4b4b; }
+    .about .aboutContainer .aboutImage {
+      width: 40%; }
+      @media (max-width: 950px) {
+        .about .aboutContainer .aboutImage {
+          display: none; } }
+
+.howItWorks {
+  margin: 30px 0; }
+  .howItWorks .container {
+    display: flex;
+    width: 100%; }
+    @media (max-width: 950px) {
+      .howItWorks .container {
+        flex-direction: column; } }
+    .howItWorks .container .box {
+      width: 33.3%;
+      padding: 15px; }
+      @media (max-width: 950px) {
+        .howItWorks .container .box {
+          width: 70%;
+          margin: 0 auto;
+          padding: 0; } }
+      .howItWorks .container .box .img {
+        width: 100%; }
+        .howItWorks .container .box .img img {
+          width: 65%;
+          margin: 20px auto; }
+      .howItWorks .container .box .info h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2rem;
+        letter-spacing: 2.5px;
+        line-height: 35px;
+        color: #4b4b4b;
+        line-height: 25px;
+        text-align: center;
+        margin: 20px 0; }
+        .howItWorks .container .box .info h3 span {
+          display: block; }
+      .howItWorks .container .box .info p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 2.5px;
+        line-height: 35px;
+        color: #4b4b4b;
+        letter-spacing: 1px;
+        line-height: 18px;
+        margin-bottom: 60px;
+        position: relative; }
+        .howItWorks .container .box .info p::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -30px;
+          height: 1px;
+          width: 100%;
+          background-color: lightgray; }
+      .howItWorks .container .box .quote {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 2.5px;
+        line-height: 35px;
+        line-height: 16px;
+        text-align: center; }
+        .howItWorks .container .box .quote .italic {
+          font-style: italic;
+          position: relative; }
+          .howItWorks .container .box .quote .italic::before {
+            content: " “ ";
+            font-size: 4rem;
+            position: absolute;
+            top: 0px;
+            left: -10px; }
+          .howItWorks .container .box .quote .italic::after {
+            content: " ” ";
+            font-size: 4rem;
+            position: absolute;
+            bottom: -15px; }
+        .howItWorks .container .box .quote .author {
+          color: #4b4b4b;
+          margin: 10px 0; }
+          .howItWorks .container .box .quote .author a {
+            text-decoration: none;
+            color: #43B9C6; }
+
+.formSection h4 {
+  font-family: 'Bree Serif', serif;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-align: center; }
+
+.formSection .signUp {
+  margin: 30px 0;
+  padding-top: 30px;
+  background: #f0f0f0; }
+  .formSection .signUp h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2.5px;
+    line-height: 35px;
+    text-align: center; }
+  .formSection .signUp form {
+    display: flex;
+    flex-direction: column; }
+    .formSection .signUp form .formContainer {
+      display: flex; }
+      @media (max-width: 950px) {
+        .formSection .signUp form .formContainer {
+          flex-direction: column; } }
+      .formSection .signUp form .formContainer .parentInfo,
+      .formSection .signUp form .formContainer .daycareInfo {
+        width: 50%;
+        padding: 0 40px; }
+        @media (max-width: 950px) {
+          .formSection .signUp form .formContainer .parentInfo,
+          .formSection .signUp form .formContainer .daycareInfo {
+            width: 100%; } }
+        .formSection .signUp form .formContainer .parentInfo h2,
+        .formSection .signUp form .formContainer .daycareInfo h2 {
+          font-family: 'Bree Serif', serif;
+          font-size: 2.5rem;
+          letter-spacing: 2px; }
+        @media (max-width: 950px) {
+          .formSection .signUp form .formContainer .parentInfo .daycareHeading,
+          .formSection .signUp form .formContainer .daycareInfo .daycareHeading {
+            margin-top: 25px; } }
+        .formSection .signUp form .formContainer .parentInfo input[type=text],
+        .formSection .signUp form .formContainer .parentInfo input[type=email],
+        .formSection .signUp form .formContainer .daycareInfo input[type=text],
+        .formSection .signUp form .formContainer .daycareInfo input[type=email] {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1.5rem;
+          letter-spacing: 2.5px;
+          line-height: 35px;
+          padding: 8px 5px;
+          margin-top: 8px;
+          border: none; }
+          .formSection .signUp form .formContainer .parentInfo input[type=text]:focus,
+          .formSection .signUp form .formContainer .parentInfo input[type=email]:focus,
+          .formSection .signUp form .formContainer .daycareInfo input[type=text]:focus,
+          .formSection .signUp form .formContainer .daycareInfo input[type=email]:focus {
+            background-color: #FECB7C;
+            outline: none; }
+        .formSection .signUp form .formContainer .parentInfo input[type=file],
+        .formSection .signUp form .formContainer .daycareInfo input[type=file] {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1.2rem;
+          letter-spacing: 2.5px;
+          line-height: 35px;
+          letter-spacing: 1px;
+          margin-top: 8px; }
+        .formSection .signUp form .formContainer .parentInfo label,
+        .formSection .signUp form .formContainer .parentInfo p,
+        .formSection .signUp form .formContainer .daycareInfo label,
+        .formSection .signUp form .formContainer .daycareInfo p {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 1.4rem;
+          font-weight: 800;
+          letter-spacing: 2 px; }
+        .formSection .signUp form .formContainer .parentInfo span,
+        .formSection .signUp form .formContainer .daycareInfo span {
+          color: #F78F1E;
+          font-size: 1.5rem; }
+        .formSection .signUp form .formContainer .parentInfo .inputContainer,
+        .formSection .signUp form .formContainer .daycareInfo .inputContainer {
+          display: flex;
+          flex-direction: column;
+          margin-top: 25px; }
+        .formSection .signUp form .formContainer .parentInfo .contactContainer,
+        .formSection .signUp form .formContainer .daycareInfo .contactContainer {
+          display: flex;
+          margin-top: 15px; }
+          .formSection .signUp form .formContainer .parentInfo .contactContainer .container,
+          .formSection .signUp form .formContainer .daycareInfo .contactContainer .container {
+            display: block;
+            margin: 0 25px;
+            position: relative;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none; }
+            .formSection .signUp form .formContainer .parentInfo .contactContainer .container input,
+            .formSection .signUp form .formContainer .daycareInfo .contactContainer .container input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer; }
+            .formSection .signUp form .formContainer .parentInfo .contactContainer .container .checkmark,
+            .formSection .signUp form .formContainer .daycareInfo .contactContainer .container .checkmark {
+              position: absolute;
+              top: 0px;
+              left: -25px;
+              height: 20px;
+              width: 20px;
+              background-color: #a6a6a6;
+              border-radius: 50%; }
+        .formSection .signUp form .formContainer .parentInfo .container:hover input ~ .checkmark,
+        .formSection .signUp form .formContainer .daycareInfo .container:hover input ~ .checkmark {
+          background-color: #a6a6a6; }
+        .formSection .signUp form .formContainer .parentInfo .container input:checked ~ .checkmark,
+        .formSection .signUp form .formContainer .daycareInfo .container input:checked ~ .checkmark {
+          background-color: #43B9C6; }
+        .formSection .signUp form .formContainer .parentInfo .container input:checked ~ .checkmark:after,
+        .formSection .signUp form .formContainer .daycareInfo .container input:checked ~ .checkmark:after {
+          display: block; }
+        .formSection .signUp form .formContainer .parentInfo .container .checkmark:after,
+        .formSection .signUp form .formContainer .daycareInfo .container .checkmark:after {
+          top: 9px;
+          left: 9px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: white; }
+        .formSection .signUp form .formContainer .parentInfo .checkmark:after,
+        .formSection .signUp form .formContainer .daycareInfo .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none; }
+        .formSection .signUp form .formContainer .parentInfo .container input:checked ~ .checkmark:after,
+        .formSection .signUp form .formContainer .daycareInfo .container input:checked ~ .checkmark:after {
+          display: block; }
+        .formSection .signUp form .formContainer .parentInfo .container .checkmark:after,
+        .formSection .signUp form .formContainer .daycareInfo .container .checkmark:after {
+          top: 6px;
+          left: 6px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: white; }
+    .formSection .signUp form .letsTalk {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 2.5px;
+      line-height: 35px;
+      background-color: #43B9C6;
+      align-self: center;
+      width: 20%;
+      border: none;
+      padding: 10px;
+      margin: 30px 0 20px 0;
+      color: white;
+      transition: 1s all ease; }
+      .formSection .signUp form .letsTalk:hover {
+        background-color: #79BE43; }
+      @media (max-width: 950px) {
+        .formSection .signUp form .letsTalk {
+          width: 35%;
+          padding: 12px; } }
+      @media (max-width: 375px) {
+        .formSection .signUp form .letsTalk {
+          width: 60%; } }
+
+.thankYou .container {
+  display: flex;
+  flex-direction: column;
+  background-color: #B5D55B;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  padding: 40px; }
+  .thankYou .container h2 {
+    font-family: 'Bree Serif', serif;
+    font-size: 6.5rem;
+    letter-spacing: 2px;
+    color: white;
+    letter-spacing: 4px;
+    text-align: center; }
+    @media (max-width: 375px) {
+      .thankYou .container h2 {
+        font-size: 5rem; } }
+  .thankYou .container .thankYou_bold {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: 2 px;
+    color: white; }
+    @media (max-width: 720px) {
+      .thankYou .container .thankYou_bold {
+        font-size: 2rem; } }
+    @media (max-width: 375px) {
+      .thankYou .container .thankYou_bold {
+        display: none; } }
+  .thankYou .container p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2.5px;
+    line-height: 35px;
+    color: #4b4b4b;
+    margin: 10px 0; }
+    @media (max-width: 375px) {
+      .thankYou .container p {
+        font-size: 1.9rem; } }
+  .thankYou .container .return {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 2.5px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #0F8790;
+    align-self: center;
+    text-decoration: none;
+    color: white;
+    width: 35%;
+    padding: 15px;
+    margin: 10px 0; }
+    @media (max-width: 1080px) {
+      .thankYou .container .return {
+        width: 50%; } }
+    @media (max-width: 720px) {
+      .thankYou .container .return {
+        width: 90%; } }
+    @media (max-width: 375px) {
+      .thankYou .container .return {
+        width: 95%;
+        margin-top: 15px; } }
