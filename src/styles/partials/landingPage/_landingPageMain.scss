@@ -56,10 +56,106 @@
     }
 }
 
-.signUp {
+.howItWorks {
+    margin: 30px 0;
+    .container {
+        @include displayFlex;
+        width: 100%;
+         // forTablet__portrait breakpoint
+        @include breakpoint(forTablet__landscape) {
+            flex-direction: column;
+        }
+            .box {
+                width: 33.3%;
+                padding: 15px;
+                 // forTablet__portrait breakpoint
+                @include breakpoint(forTablet__landscape) {
+                    width: 70%;
+                    margin: 0 auto;
+                    padding: 0;
+                }
+                .img {
+                    width: 100%;
+                        img{
+                            width: 65%;
+                            margin: 20px auto;
+                        }
+                }
+                .info {
+                    h3 {
+                        @include bodyText(2rem);
+                        color: $medGrey;
+                        line-height: 25px;
+                        text-align: center;
+                        margin: 20px 0;
+                            span{
+                                display: block;
+                            }
+                    }
+                    p {
+                        @include bodyText(1.5rem);
+                        color: $medGrey;
+                        letter-spacing: 1px;
+                        line-height: 18px;
+                        margin-bottom: 60px;
+                        position: relative;
+                            &::after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                bottom: -30px;
+                                height: 1px;
+                                width: 100%;
+                                background-color: lightgray;
+                            }
+                    }
+                }
+                .quote {
+                    @include bodyText(1.5rem);
+                    line-height: 16px;
+                    text-align: center;
+                        .italic {
+                            font-style: italic;
+                            position: relative;
+                             &::before {
+                                 content: " “ ";
+                                 font-size: 4rem;
+                                 position: absolute;
+                                 top: 0px;
+                                 left: -10px;
+                             }
+                             &::after {
+                                 content: " ” ";
+                                 font-size: 4rem;
+                                 position: absolute;
+                                 bottom:-15px;
+                             }
+                        }
+                        .author {
+                            color: $medGrey;
+                            margin: 10px 0;
+                                a {
+                                    text-decoration: none;
+                                    color: $medBlue;
+                                }
+                        }
+                }   
+            }
+    }
+}
+.formSection {
+    h4 {
+        @include heading(3.5rem);
+        text-align: center;
+    }
+    .signUp {
     margin: 30px 0;
     padding-top: 30px;
     background: $ltGrey;
+        h4{
+            @include bodyText(2.5rem);
+            text-align: center;
+        }
         form {
             @include displayFlex;
             flex-direction: column;
@@ -203,4 +299,5 @@
             } 
          }
      }    
+    }
 }
