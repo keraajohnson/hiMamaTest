@@ -11,6 +11,10 @@
             color: white;
             letter-spacing: 4px;
             text-align: center;
+            // forMobile breakpoint
+             @include breakpoint(forMobile) {
+                font-size: 5rem;
+            }
         }
         .thankYou_bold {
             @include subHeading(2.6rem);
@@ -19,12 +23,20 @@
             @include breakpoint(forTablet__portrait) {
                 font-size: 2rem;
             }
+            // forMobile breakpoint
+             @include breakpoint(forMobile) {
+                display: none;
+            }
             
         }
         p {
             @include bodyText(2.5rem);
             color: $medGrey;
             margin: 10px 0;
+            // forMobile breakpoint
+            @include breakpoint(forMobile) {
+                font-size: 1.9rem;
+            }
         }
         .return {
             @include bodyText(1.7rem);
@@ -35,7 +47,7 @@
             color: white;
             width: 35%;
             padding: 15px;
-            margin: 10px 0 10px 0;
+            margin: 10px 0;
             @include breakpoint(forDesktop) {
                 width: 50%;
             }
@@ -43,6 +55,11 @@
             @include breakpoint(forTablet__portrait) {
                 width: 90%;
             }
+            // forMobile breakpoint
+             @include breakpoint(forMobile) {
+                width: 95%;
+                margin-top: 15px;
+            } 
         }
     }
 }

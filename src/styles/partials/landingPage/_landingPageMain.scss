@@ -1,7 +1,7 @@
 .logo{
     margin-top: 20px;
     .imageContainer {
-        width: 100%;
+        width: 80%;
         border-bottom: 4px solid $dkBlue;
     }
 }
@@ -34,7 +34,12 @@
                 margin-bottom: 20px;
                 // forTablet__portrait breakpoint
                 @include breakpoint(forTablet__landscape) {
-                    font-size: 5rem;
+                    font-size: 4.3rem;
+                }
+                // forTablet__portrait breakpoint
+                @include breakpoint(forTablet__portrait) {
+                    line-height: 60px;
+
                 }
             }
             p {
@@ -191,7 +196,11 @@
             @include breakpoint(forTablet__landscape) {
                 width: 35%;
                 padding: 12px;
-            }    
+            }   
+            // forMobile breakpoint
+            @include breakpoint(forMobile) {
+                width: 60%;
+            } 
          }
      }    
 }
